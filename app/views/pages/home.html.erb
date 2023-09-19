@@ -1,0 +1,7 @@
+<% if user_signed_in?%>
+    <%= link_to "Admin", admin_index_path if current_user.admin? %>
+    <%= link_to "Open Posts", posts_path %>
+<% else %>
+    <%= link_to "Login", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path %>
+<% end %>

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" <%= link_to 'DeviseAuth', posts_path %> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to  "Posts", posts_path, class: "#{'font-weight-bold' if controller_name == "posts"}" %> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to 'Create Post', new_post_path %> </a>
+        </li>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to current_user.email, edit_user_registration_path, class: "#{'font-weight-bold' if current_page?(edit_user_registration_path)}" %> </a>
+        </li>
+        <li class= "nav-item">
+          <a class="nav-link" <%= link_to "Admin", admin_index_path if current_user.admin? %>
+        <li class="nav-item">
+          <%= button_to "Logout", destroy_user_session_path,:class => 'navbar-link', method: :delete %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to "Login", new_user_session_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to "Sign Up", new_user_registration_path %></a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

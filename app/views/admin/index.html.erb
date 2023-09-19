@@ -1,0 +1,33 @@
+<h1>Admin Dashboard</h1>
+
+<%= form_with(model: @user, url:admin_index_path, method: :post) do |f| %>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.select :role, User.roles.keys.map { |w| [w.humanize, w] }, include_blank: "Select a role" %>
+    <br />
+    <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %> 
+    <br />
+    <%= f.submit %>
+<% end %>
+
+<% @users.each do |user| %>
+    <%= form_for(user, url: admin_path(user), remote: true, method: :path) do |f| %>
+    <p><%= f.text_field :email %> - <%= f.select(:role, User.roles.keys.map { |w| [w.humanize, w] }) %> - <%= f.submit "Update" %>
+    <% end %>
+<% end %>
+<% if user_signed_in? %>
+  <% @users.each do |user| %>
+  <strong>email:</strong>
+  <%= user.email %>
+  <strong>current_sign_in_ip:</strong>
+  <%= user.current_sign_in_ip %>
+  <strong>confirmed?</strong>
+  <%= user.confirmed? %>
+  <strong>access locked?</strong>
+  <%= user.access_locked? %>
+  <strong>Role:</strong>
+  <%= user.role %>
+  <%= button_to 'Ban', ban_user_path(user), mathod: :patch %>
+  <br>
+  <% end %>
+<% end %>
