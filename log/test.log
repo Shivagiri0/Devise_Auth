@@ -1946,3 +1946,1048 @@ Completed 401 Unauthorized in 58ms (ActiveRecord: 0.0ms | Allocations: 1203)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (15.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (27.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "confirmed_at", "confirmation_sent_at", "failed_attempts", "unlock_token", "locked_at", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["email", "user@user.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["sign_in_count", 0], ["current_sign_in_at", nil], ["last_sign_in_at", nil], ["current_sign_in_ip", nil], ["last_sign_in_ip", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-09-19 09:00:48.993288"], ["failed_attempts", 0], ["unlock_token", "[FILTERED]"], ["locked_at", nil], ["created_at", "2023-09-19 09:00:48.992903"], ["updated_at", "2023-09-19 09:00:48.992903"], ["role", 0]]
+  [1m[36mTRANSACTION (29.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/shiva/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/devise-4.9.2/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/shiva/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/devise-4.9.2/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 23.6ms | Allocations: 1241)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 822.2ms
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (102.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:06:34.058381"], ["updated_at", "2023-09-19 10:06:34.058381"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:51:34 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (50.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 95.0ms | Allocations: 1632)
+  Rendered layouts/_navbar.html.erb (Duration: 35.2ms | Allocations: 894)
+  Rendered layout layouts/application.html.erb (Duration: 1814.1ms | Allocations: 87459)
+Completed 200 OK in 2852ms (Views: 1771.9ms | ActiveRecord: 51.3ms | Allocations: 368720)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:06:37.177760"], ["updated_at", "2023-09-19 10:06:37.177760"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:51:37 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2206)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 1.5ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:51:37 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 1895)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 4.2ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:06:37.263937"], ["updated_at", "2023-09-19 10:06:37.263937"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 15:51:37 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 952)
+  [1m[36mPost Count (6.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 15:51:37 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:07:53.610342"], ["updated_at", "2023-09-19 10:07:53.610342"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:52:53 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 18.9ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 251.6ms | Allocations: 34054)
+Completed 200 OK in 1007ms (Views: 257.9ms | ActiveRecord: 1.5ms | Allocations: 315316)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:07:54.786199"], ["updated_at", "2023-09-19 10:07:54.786199"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:52:54 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 2206)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 1.8ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 15:52:54 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (4.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 1895)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 4.8ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:07:54.879014"], ["updated_at", "2023-09-19 10:07:54.879014"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 15:52:54 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 15:52:54 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:16:30.922674"], ["updated_at", "2023-09-19 10:16:30.922674"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:01:30 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 15.8ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 168.2ms | Allocations: 34134)
+Completed 200 OK in 750ms (Views: 172.0ms | ActiveRecord: 1.4ms | Allocations: 315397)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:16:31.787976"], ["updated_at", "2023-09-19 10:16:31.787976"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.9ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 2206)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1895)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 1.4ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:16:31.852665"], ["updated_at", "2023-09-19 10:16:31.852665"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:01:31 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:17:22.672494"], ["updated_at", "2023-09-19 10:17:22.672494"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:02:22 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 16.5ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 163.9ms | Allocations: 34271)
+Completed 200 OK in 749ms (Views: 168.7ms | ActiveRecord: 1.3ms | Allocations: 315535)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:17:23.543449"], ["updated_at", "2023-09-19 10:17:23.543449"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2206)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.1ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.4ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 1895)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 1.4ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:17:23.605354"], ["updated_at", "2023-09-19 10:17:23.605354"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:02:23 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:36:09.354204"], ["updated_at", "2023-09-19 10:36:09.354204"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:21:09 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 25.2ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 237.4ms | Allocations: 34160)
+Completed 200 OK in 957ms (Views: 244.4ms | ActiveRecord: 1.6ms | Allocations: 315421)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:36:10.462731"], ["updated_at", "2023-09-19 10:36:10.462731"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.7ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2206)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 2.2ms | Allocations: 2421)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 3.0ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 1895)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 3.2ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:36:10.544197"], ["updated_at", "2023-09-19 10:36:10.544197"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:21:10 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:37.412152"], ["updated_at", "2023-09-19 10:37:37.412152"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:37 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 18.5ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 166.2ms | Allocations: 34258)
+Completed 200 OK in 860ms (Views: 170.9ms | ActiveRecord: 1.3ms | Allocations: 315522)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:38.395729"], ["updated_at", "2023-09-19 10:37:38.395729"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2206)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.1ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 1895)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.3ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:38.461540"], ["updated_at", "2023-09-19 10:37:38.461540"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:38 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:58.424420"], ["updated_at", "2023-09-19 10:37:58.424420"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:58 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 16.3ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 158.1ms | Allocations: 33778)
+Completed 200 OK in 734ms (Views: 161.9ms | ActiveRecord: 1.4ms | Allocations: 315040)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:59.270170"], ["updated_at", "2023-09-19 10:37:59.270170"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 2206)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.3ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 1895)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.2ms | Allocations: 2109)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:37:59.336840"], ["updated_at", "2023-09-19 10:37:59.336840"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:22:59 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:44:39.532515"], ["updated_at", "2023-09-19 10:44:39.532515"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:29:39 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 16.1ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 162.5ms | Allocations: 34002)
+Completed 200 OK in 989ms (Views: 167.4ms | ActiveRecord: 1.3ms | Allocations: 315265)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:44:40.648648"], ["updated_at", "2023-09-19 10:44:40.648648"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 2206)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 1.5ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1895)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.4ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:44:40.706022"], ["updated_at", "2023-09-19 10:44:40.706022"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:29:40 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:45:20.433461"], ["updated_at", "2023-09-19 10:45:20.433461"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:30:20 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 16.4ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 168.5ms | Allocations: 34135)
+Completed 200 OK in 756ms (Views: 173.1ms | ActiveRecord: 1.3ms | Allocations: 315399)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:45:21.322350"], ["updated_at", "2023-09-19 10:45:21.322350"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:30:21 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2206)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.2ms | Allocations: 2421)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:30:21 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 1895)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 1.2ms | Allocations: 2109)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:45:21.391862"], ["updated_at", "2023-09-19 10:45:21.391862"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:30:21 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:30:21 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:30:21 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:46:35.290527"], ["updated_at", "2023-09-19 10:46:35.290527"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:31:35 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 16.6ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 165.4ms | Allocations: 34409)
+Completed 200 OK in 785ms (Views: 170.6ms | ActiveRecord: 1.3ms | Allocations: 315669)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:46:36.212545"], ["updated_at", "2023-09-19 10:46:36.212545"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts.1" for 127.0.0.1 at 2023-09-19 16:31:36 +0545
+Processing by PostsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2206)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.7ms | Allocations: 2528)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:46:36.258862"], ["updated_at", "2023-09-19 10:46:36.258862"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:31:36 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:31:36 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:31:36 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:31:36 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (2.6ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:47:27.194903"], ["updated_at", "2023-09-19 10:47:27.194903"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:32:27 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 19.1ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 177.4ms | Allocations: 34031)
+Completed 200 OK in 805ms (Views: 182.3ms | ActiveRecord: 1.3ms | Allocations: 315292)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:47:28.165052"], ["updated_at", "2023-09-19 10:47:28.165052"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts.1" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 2206)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 2.6ms | Allocations: 2528)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts/new" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 950)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:47:28.293271"], ["updated_at", "2023-09-19 10:47:28.293271"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:32:28 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:53:17.989926"], ["updated_at", "2023-09-19 10:53:17.989926"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:38:18 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1632)
+  Rendered layouts/_navbar.html.erb (Duration: 17.6ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 177.2ms | Allocations: 34403)
+Completed 200 OK in 814ms (Views: 182.6ms | ActiveRecord: 1.4ms | Allocations: 315680)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:53:18.959180"], ["updated_at", "2023-09-19 10:53:18.959180"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts.1" for 127.0.0.1 at 2023-09-19 16:38:18 +0545
+Processing by PostsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2206)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.9ms | Allocations: 2528)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:38:18 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 1895)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.4ms | Allocations: 2110)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:53:19.024364"], ["updated_at", "2023-09-19 10:53:19.024364"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:38:19 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 951)
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:38:19 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"1", "title"=>"title", "body"=>"this is body"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:38:19 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+Started POST "/posts" for 127.0.0.1 at 2023-09-19 16:38:19 +0545
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"id"=>"a", "title"=>"1", "body"=>"12345"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:54:24.927150"], ["updated_at", "2023-09-19 10:54:24.927150"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:39:24 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1631)
+  Rendered layouts/_navbar.html.erb (Duration: 25.9ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 212.2ms | Allocations: 34272)
+Completed 200 OK in 955ms (Views: 217.8ms | ActiveRecord: 1.8ms | Allocations: 315930)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("id", "title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["title", "title"], ["body", "this is body"], ["user_id", 7], ["created_at", "2023-09-19 10:54:26.083600"], ["updated_at", "2023-09-19 10:54:26.083600"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts.1" for 127.0.0.1 at 2023-09-19 16:39:26 +0545
+Processing by PostsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 553)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2206)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.5ms | Allocations: 2528)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2023-09-19 16:39:26 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 242)
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 1895)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 2.0ms | Allocations: 2110)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
