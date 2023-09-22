@@ -49385,3 +49385,305 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 91ms (Views: 78.3ms | ActiveRecord: 10.5ms | Allocations: 5531)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-21 07:48:08 +0545
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 18.6ms | Allocations: 1575)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 86.6ms | Allocations: 5059)
+  Rendered layouts/_navbar.html.erb (Duration: 17.5ms | Allocations: 602)
+  Rendered layout layouts/application.html.erb (Duration: 415.3ms | Allocations: 38856)
+Completed 200 OK in 662ms (Views: 470.6ms | ActiveRecord: 78.7ms | Allocations: 55562)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-21 07:48:22 +0545
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"user@user.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (40.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:48:in `check_failed_attempts'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 10.1ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 1845)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mUser Update (8.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 5], ["current_sign_in_at", "2023-09-21 02:03:23.718228"], ["last_sign_in_at", "2023-09-18 09:09:22.757362"], ["updated_at", "2023-09-21 02:03:23.726568"], ["id", 6]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 1465.4ms | Allocations: 6277)
+  Rendered layout layouts/application.html.erb (Duration: 1516.2ms | Allocations: 10377)
+Filter chain halted as :check_failed_attempts rendered or redirected
+Completed 200 OK in 1597ms (Views: 1497.4ms | ActiveRecord: 66.2ms | Allocations: 13463)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 07:48:26 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (40.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 155.3ms | Allocations: 5369)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 18.2ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 197.7ms | Allocations: 9235)
+Completed 200 OK in 254ms (Views: 149.6ms | ActiveRecord: 62.7ms | Allocations: 11111)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 07:48:31 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1527)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 9.0ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 5246)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 3.1ms | Allocations: 5526)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 07:48:39 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 1527)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 20.1ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 5243)
+Completed 200 OK in 90ms (Views: 78.6ms | ActiveRecord: 9.0ms | Allocations: 5523)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 10:19:40 +0545
+  [1m[36mActiveRecord::SchemaMigration Pluck (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (41.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 267.4ms | Allocations: 6986)
+  Rendered layouts/_navbar.html.erb (Duration: 29.1ms | Allocations: 701)
+  Rendered layout layouts/application.html.erb (Duration: 794.6ms | Allocations: 41134)
+Completed 200 OK in 934ms (Views: 688.6ms | ActiveRecord: 130.2ms | Allocations: 46599)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-21 10:19:47 +0545
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 28.6ms | Allocations: 1541)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 115.1ms | Allocations: 4608)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 231.5ms | Allocations: 7160)
+Completed 200 OK in 357ms (Views: 239.0ms | ActiveRecord: 22.8ms | Allocations: 19071)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-21 10:19:58 +0545
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (41.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:48:in `check_failed_attempts'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 10.5ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 1840)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mUser Update (56.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 35], ["current_sign_in_at", "2023-09-21 04:34:59.500170"], ["last_sign_in_at", "2023-09-12 07:05:14.647736"], ["updated_at", "2023-09-21 04:34:59.501082"], ["id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 1303.8ms | Allocations: 6212)
+  Rendered layout layouts/application.html.erb (Duration: 1361.0ms | Allocations: 10323)
+Filter chain halted as :check_failed_attempts rendered or redirected
+Completed 200 OK in 1441ms (Views: 1275.5ms | ActiveRecord: 134.8ms | Allocations: 13274)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 10:23:01 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1730)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 13.5ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 64.1ms | Allocations: 5510)
+Completed 200 OK in 76ms (Views: 69.4ms | ActiveRecord: 4.4ms | Allocations: 5811)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-09-21 10:23:04 +0545
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to https://localhost:3001/
+Completed 303 See Other in 128ms (ActiveRecord: 1.6ms | Allocations: 9513)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-21 10:23:04 +0545
+Processing by PagesController#home as TURBO_STREAM
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-21 10:23:04 +0545
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.3ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1793)
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 4248)
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 4924)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-21 10:23:31 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.5ms | Allocations: 1529)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 4187)
+Completed 200 OK in 67ms (Views: 60.2ms | ActiveRecord: 5.0ms | Allocations: 4467)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-22 10:03:45 +0545
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 38.8ms | Allocations: 1574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 130.9ms | Allocations: 5053)
+  Rendered layouts/_navbar.html.erb (Duration: 4.9ms | Allocations: 602)
+  Rendered layout layouts/application.html.erb (Duration: 427.1ms | Allocations: 38521)
+Completed 200 OK in 780ms (Views: 461.5ms | ActiveRecord: 91.1ms | Allocations: 55227)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-22 10:04:01 +0545
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (180.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:48:in `check_failed_attempts'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.6ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1845)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mUser Update (23.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 36], ["current_sign_in_at", "2023-09-22 04:19:02.885774"], ["last_sign_in_at", "2023-09-21 04:34:59.500170"], ["updated_at", "2023-09-22 04:19:02.974844"], ["id", 2]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  [1m[36mTRANSACTION (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 1406.6ms | Allocations: 6310)
+  Rendered layout layouts/application.html.erb (Duration: 1485.7ms | Allocations: 10410)
+Filter chain halted as :check_failed_attempts rendered or redirected
+Completed 200 OK in 1697ms (Views: 1436.8ms | ActiveRecord: 235.4ms | Allocations: 13506)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-22 10:04:04 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (35.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 137.1ms | Allocations: 5368)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 20.6ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 183.4ms | Allocations: 9266)
+Completed 200 OK in 208ms (Views: 132.9ms | ActiveRecord: 57.9ms | Allocations: 11142)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-09-22 10:04:09 +0545
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 159.6ms | Allocations: 235)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 182.3ms | Allocations: 2682)
+  Rendered layouts/_navbar.html.erb (Duration: 4.6ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 207.8ms | Allocations: 5487)
+Completed 200 OK in 238ms (Views: 218.7ms | ActiveRecord: 1.1ms | Allocations: 8019)
+
+
+Started GET "/admin" for 127.0.0.1 at 2023-09-22 10:04:15 +0545
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:13
+  Rendered admin/index.html.erb within layouts/application (Duration: 140.1ms | Allocations: 5498)
+  Rendered layouts/_navbar.html.erb (Duration: 4.2ms | Allocations: 444)
+  Rendered layout layouts/application.html.erb (Duration: 172.2ms | Allocations: 8291)
+Completed 200 OK in 212ms (Views: 179.5ms | ActiveRecord: 4.7ms | Allocations: 10555)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-09-22 10:04:22 +0545
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (6.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 34.9ms | Allocations: 1523)
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:15
+  Rendered layouts/_navbar.html.erb (Duration: 23.7ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | Allocations: 5455)
+Completed 200 OK in 109ms (Views: 92.6ms | ActiveRecord: 13.0ms | Allocations: 5730)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-09-22 10:04:27 +0545
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to https://localhost:3001/
+Completed 303 See Other in 109ms (ActiveRecord: 1.2ms | Allocations: 9471)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-22 10:04:27 +0545
+Processing by PagesController#home as TURBO_STREAM
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-22 10:04:28 +0545
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.0ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 1792)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 4245)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.0ms | Allocations: 4940)
+
+
