@@ -80,3 +80,4 @@ gem 'omniauth-github', '~> 2.0.0'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'resque'
+
