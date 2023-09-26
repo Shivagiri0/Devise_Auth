@@ -14,7 +14,6 @@ class Users::SessionsController < Devise::SessionsController
     auth = request.env['omniauth.auth']
     @user = User.find_by(email: auth.info.email) || User.create(email: auth.info.email)
     self.resource = warden.authenticate!(auth_options)
-    # if resource.sign_in_count == 1 && resource.current_sign_in_ip != resource.last_sign_in_ip
     set_flash_message!(:notice, :signed_in)
     sign_in(resource_name, resource)
     yield resource if block_given?

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  
+
+  # Sign in via google
   def google_oauth2
     @user = User.from_omniauth(request.env['omniauth.auth'])
     if @user.persisted?
@@ -13,6 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # Sign in via github
   def github
     @user = User.from_omniauth(request.env['omniauth.auth'])
     if @user.persisted?

@@ -18,8 +18,6 @@ class Users::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  # GET /resource/password/edit?reset_password_token=abcdef
-
   def edit
     if reset_password_token_valid?
       self.resource = resource_class.new
