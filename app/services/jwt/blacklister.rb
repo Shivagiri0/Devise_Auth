@@ -1,3 +1,4 @@
+# Blacklitsing user after cancelling account
 module Jwt
   module Blacklister
     module_function

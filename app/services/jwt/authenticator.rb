@@ -1,3 +1,4 @@
+# JSON Web Token Authentication handlers
 module Jwt
   module Authenticator
     module_function
